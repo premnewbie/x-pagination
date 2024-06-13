@@ -21,7 +21,7 @@ const TableData = () => {
         .then(res => {
             setApiData(res.data);
         })
-        .catch(err => console.log(err));
+        .catch(err => alert("Error"));
     },[]);
 
     const handleIncrement = () => {
