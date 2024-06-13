@@ -2,11 +2,11 @@ const Navigation = ({pageNum,handleDecrement,handleIncrement}) => {
     return ( 
         <div className='navigations'>
             <button className='prev-btn' onClick={handleDecrement}>
-                <p>Previous</p>
+                Previous
             </button>
             <p className='page-num'>{pageNum}</p>
             <button className='next-btn' onClick={handleIncrement}>
-                <p>Next</p>
+                Next
             </button>
         </div>
      );
