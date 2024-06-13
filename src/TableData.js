@@ -47,14 +47,16 @@ const TableData = () => {
                     <th>Email</th>
                     <th>Role</th>
                 </tr>
-                {apiData?.slice(firstIndex,lastIndex)
-                .map((item) => (<tr key={item.id}>
-                    <td>{item.id}</td>
-                    <td>{item.name}</td>
-                    <td>{item.email}</td>
-                    <td>{item.role}</td>
-                </tr>))
-                }
+                <tbody>
+                    {apiData?.slice(firstIndex,lastIndex)
+                    .map((item) => (<tr key={item.id}>
+                        <td>{item.id}</td>
+                        <td>{item.name}</td>
+                        <td>{item.email}</td>
+                        <td>{item.role}</td>
+                    </tr>))
+                    }
+                </tbody>
             </table>
             <Navigation pageNum={pageNum} handleIncrement={handleIncrement} handleDecrement={handleDecrement}/>
         </div>
