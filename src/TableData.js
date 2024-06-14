@@ -25,10 +25,10 @@ const TableData = () => {
     },[]);
 
     const handleIncrement = () => {
-        if(Math.ceil(apiData.length/recordPerPage) >= ((pageNum+1))){
+        if(Math.ceil(apiData?.length/recordPerPage) >= ((pageNum+1))){
             setPageNum(prev => prev+1);
         }
-        console.log(apiData.length)
+        // console.log(apiData.length)
     }
 
     const handleDecrement = () => {
@@ -41,12 +41,14 @@ const TableData = () => {
     return ( 
         <div className="table-and-pagination">
             <table>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Role</th>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
                 <tbody>
                     {apiData?.slice(firstIndex,lastIndex)
                     .map((item) => (<tr key={item.id}>
